@@ -945,7 +945,6 @@ _Default Value:_ 10240
 
 == `storage_port`
 
-
 TCP port, for commands and data
 For security reasons, you should not expose this port to the internet.  Firewall it if needed.
 
