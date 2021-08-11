@@ -21,8 +21,14 @@ and will use the initial_token as described below.
 Specifying initial_token will override this setting on the node's initial start,
 on subsequent starts, this setting will apply even if initial token is set.
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 _Default Value:_ 256
 
+=======
+
+_Default Value:_ 256
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 == `allocate_tokens_for_keyspace`
 
 *This option is commented out by default.*
@@ -60,6 +66,10 @@ comma-separated list -- it's primarily used when adding nodes to legacy clusters
 that do not have vnodes enabled.
 
 == `hinted_handoff_enabled`
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 May either be "true" or "false" to enable globally
 
@@ -74,6 +84,7 @@ perform hinted handoff
 
 _Default Value (complex option)_:
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 [source, plaintext]
 ----
     #    - DC1
@@ -82,6 +93,15 @@ _Default Value (complex option)_:
 
 == `max_hint_window_in_ms`
 
+=======
+....
+    #    - DC1
+    #    - DC2
+....
+
+== `max_hint_window_in_ms`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 this defines the maximum amount of time a dead host will have hints
 generated.  After it has been dead this long, new hints for it will not be
 created until it has been seen alive and gone down again.
@@ -142,12 +162,20 @@ are supported.
 
 _Default Value (complex option)_:
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 [source, plaintext]
 ----
     #   - class_name: LZ4Compressor
     #     parameters:
     #         -
 ----
+=======
+....
+    #   - class_name: LZ4Compressor
+    #     parameters:
+    #         -
+....
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `batchlog_replay_throttle_in_kb`
 
@@ -170,8 +198,14 @@ PasswordAuthenticator}.
   If using PasswordAuthenticator, CassandraRoleManager must also be used (see below)
 
 _Default Value:_ AllowAllAuthenticator
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `authorizer`
+=======
+
+== `authorizer`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Authorization backend, implementing IAuthorizer; used to limit access/provide permissions
 Out of the box, Cassandra provides org.apache.cassandra.auth.{AllowAllAuthorizer,
@@ -182,8 +216,14 @@ CassandraAuthorizer}.
   increase system_auth keyspace replication factor if you use this authorizer.
 
 _Default Value:_ AllowAllAuthorizer
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `role_manager`
+=======
+
+== `role_manager`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Part of the Authentication & Authorization backend, implementing IRoleManager; used
 to maintain grants and memberships between roles.
@@ -196,8 +236,14 @@ actually implements authentication, most of this functionality will be unavailab
   increase system_auth keyspace replication factor if you use this role manager.
 
 _Default Value:_ CassandraRoleManager
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `network_authorizer`
+=======
+
+== `network_authorizer`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Network authorization backend, implementing INetworkAuthorizer; used to restrict user
 access to certain DCs
@@ -209,8 +255,14 @@ CassandraNetworkAuthorizer}.
   increase system_auth keyspace replication factor if you use this authorizer.
 
 _Default Value:_ AllowAllNetworkAuthorizer
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `roles_validity_in_ms`
+=======
+
+== `roles_validity_in_ms`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Validity period for roles cache (fetching granted roles can be an expensive
 operation depending on the role manager, CassandraRoleManager is one example)
@@ -233,8 +285,14 @@ also.
 Defaults to the same value as roles_validity_in_ms.
 
 _Default Value:_ 2000
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `permissions_validity_in_ms`
+=======
+
+== `permissions_validity_in_ms`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Validity period for permissions cache (fetching permissions can be an
 expensive operation depending on the authorizer, CassandraAuthorizer is
@@ -255,8 +313,14 @@ also.
 Defaults to the same value as permissions_validity_in_ms.
 
 _Default Value:_ 2000
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `credentials_validity_in_ms`
+=======
+
+== `credentials_validity_in_ms`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Validity period for credentials cache. This cache is tightly coupled to
 the provided PasswordAuthenticator implementation of IAuthenticator. If
@@ -282,8 +346,14 @@ also.
 Defaults to the same value as credentials_validity_in_ms.
 
 _Default Value:_ 2000
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `partitioner`
+=======
+
+== `partitioner`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 The partitioner is responsible for distributing groups of rows (by
 partition key) across nodes in the cluster. The partitioner can NOT be
@@ -297,6 +367,11 @@ For new clusters, you should NOT change this value.
 
 _Default Value:_ org.apache.cassandra.dht.Murmur3Partitioner
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+_Default Value:_ org.apache.cassandra.dht.Murmur3Partitioner
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 == `data_file_directories`
 
 *This option is commented out by default.*
@@ -308,6 +383,7 @@ If not set, the default directory is $CASSANDRA_HOME/data/data.
 
 _Default Value (complex option)_:
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 [source, plaintext]
 ----
     #     - /var/lib/cassandra/data
@@ -323,6 +399,11 @@ system.paxos, system.compaction_history, system.prepared_statements and system.r
 directories specified by data_file_directories.
 This approach ensures that if one of the other disks is lost Cassandra can continue to operate. For extra security
 this setting allows to store those data on a different directory that provides redundancy.
+=======
+....
+    #     - /var/lib/cassandra/data
+....
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `commitlog_directory`
 
@@ -333,8 +414,14 @@ separate spindle than the data directories.
 If not set, the default directory is $CASSANDRA_HOME/data/commitlog.
 
 _Default Value:_  /var/lib/cassandra/commitlog
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `cdc_enabled`
+=======
+
+== `cdc_enabled`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Enable / disable CDC functionality on a per-node basis. This modifies the logic used
 for write path allocation rejection (standard: never reject. cdc: reject Mutation
@@ -352,8 +439,14 @@ separate spindle than the data directories. If not set, the default directory is
 $CASSANDRA_HOME/data/cdc_raw.
 
 _Default Value:_  /var/lib/cassandra/cdc_raw
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `disk_failure_policy`
+=======
+
+== `disk_failure_policy`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Policy for data disk failures:
 
@@ -399,8 +492,14 @@ ignore
   ignore fatal errors and let the batches fail
 
 _Default Value:_ stop
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `prepared_statements_cache_size_mb`
+=======
+
+== `prepared_statements_cache_size_mb`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Maximum size of the native protocol prepared statement cache
 
@@ -421,6 +520,10 @@ Constantly re-preparing statements is a performance penalty.
 Default value ("auto") is 1/256th of the heap or 10MB, whichever is greater
 
 == `key_cache_size_in_mb`
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Maximum size of the key cache in memory.
 
@@ -436,6 +539,10 @@ NOTE: if you reduce the size, you may not get you hottest keys loaded on startup
 Default value is empty to make it "auto" (min(5% of Heap (in MB), 100MB)). Set to 0 to disable key cache.
 
 == `key_cache_save_period`
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Duration in seconds after which Cassandra should
 save the key cache. Caches are saved to saved_caches_directory as
@@ -472,8 +579,14 @@ org.apache.cassandra.cache.SerializingCacheProvider
   in previous releases of Cassandra.
 
 _Default Value:_ org.apache.cassandra.cache.OHCProvider
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `row_cache_size_in_mb`
+=======
+
+== `row_cache_size_in_mb`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Maximum size of the row cache in memory.
 Please note that OHC cache implementation requires some additional off-heap memory to manage
@@ -485,8 +598,14 @@ headroom for OS block level cache. Do never allow your system to swap.
 Default value is 0, to disable row caching.
 
 _Default Value:_ 0
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `row_cache_save_period`
+=======
+
+== `row_cache_save_period`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Duration in seconds after which Cassandra should save the row cache.
 Caches are saved to saved_caches_directory as specified in this configuration file.
@@ -507,8 +626,14 @@ Number of keys from the row cache to save.
 Specify 0 (which is the default), meaning all keys are going to be saved
 
 _Default Value:_ 100
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `counter_cache_size_in_mb`
+=======
+
+== `counter_cache_size_in_mb`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Maximum size of the counter cache in memory.
 
@@ -525,6 +650,10 @@ Default value is empty to make it "auto" (min(2.5% of Heap (in MB), 50MB)). Set 
 NOTE: if you perform counter deletes and rely on low gcgs, you should disable the counter cache.
 
 == `counter_cache_save_period`
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Duration in seconds after which Cassandra should
 save the counter cache (keys only). Caches are saved to saved_caches_directory as
@@ -565,6 +694,11 @@ almost no value, and is being removed.
 
 _Default Value:_ 2
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+_Default Value:_ 2
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 == `commitlog_sync_group_window_in_ms`
 
 *This option is commented out by default.*
@@ -575,6 +709,11 @@ mode will wait up to commitlog_sync_group_window_in_ms between flushes.
 
 _Default Value:_ 1000
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+_Default Value:_ 1000
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 == `commitlog_sync`
 
 
@@ -585,10 +724,17 @@ milliseconds.
 _Default Value:_ periodic
 
 == `commitlog_sync_period_in_ms`
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 
 _Default Value:_ 10000
 
+=======
+
+
+_Default Value:_ 10000
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 == `periodic_commitlog_sync_lag_block_in_ms`
 
 *This option is commented out by default.*
@@ -597,6 +743,10 @@ When in periodic commitlog mode, the number of milliseconds to block writes
 while waiting for a slow disk flush to complete.
 
 == `commitlog_segment_size_in_mb`
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 The size of the individual commitlog file segments.  A commitlog
 segment may be archived, deleted, or recycled once all the data
@@ -616,6 +766,11 @@ be set to at least twice the size of max_mutation_size_in_kb / 1024
 
 _Default Value:_ 32
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+_Default Value:_ 32
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 == `commitlog_compression`
 
 *This option is commented out by default.*
@@ -626,12 +781,20 @@ are supported.
 
 _Default Value (complex option)_:
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 [source, plaintext]
 ----
     #   - class_name: LZ4Compressor
     #     parameters:
     #         -
 ----
+=======
+....
+    #   - class_name: LZ4Compressor
+    #     parameters:
+    #         -
+....
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `table`
 
@@ -648,24 +811,43 @@ fast : Flush with a fast compressor. If the table is already using a
 fast compressor that compressor is used.
 
 _Default Value:_ Always flush with the same compressor that the table uses. This
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `flush_compression`
+=======
+
+== `flush_compression`
+
+*This option is commented out by default.*
+       was the pre 4.0 behavior.
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 *This option is commented out by default.*
 //was the pre 4.0 behavior.
 
 _Default Value:_ fast
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `seed_provider`
+=======
+
+== `seed_provider`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Any class that implements the SeedProvider interface and has a
 constructor that takes a Map<String, String> of parameters will do.
 
 _Default Value (complex option)_:
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 [source, plaintext]
 ----
         # Addresses of hosts that are deemed contact points.
+=======
+....
+        # Addresses of hosts that are deemed contact points. 
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
         # Cassandra nodes use this list of hosts to find each other and learn
         # the topology of the ring.  You must change this if you are running
         # multiple nodes!
@@ -674,7 +856,11 @@ _Default Value (complex option)_:
               # seeds is actually a comma-delimited list of addresses.
               # Ex: "<ip1>,<ip2>,<ip3>"
               - seeds: "127.0.0.1:7000"
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 ----
+=======
+....
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `concurrent_reads`
 
@@ -699,9 +885,17 @@ _Default Value:_ 32
 
 == `concurrent_counter_writes`
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 _Default Value:_ 32
 
 == `concurrent_materialized_view_writes`
+=======
+
+_Default Value:_ 32
+
+== `concurrent_materialized_view_writes`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 For materialized view writes, as there is a read involved, so this should
 be limited by the less of concurrent reads or concurrent writes.
@@ -733,6 +927,11 @@ file_cache_size_in_mb, beyond which it will not cache buffers but allocate on re
 
 _Default Value:_ true
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+_Default Value:_ true
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 == `disk_optimization_strategy`
 
 *This option is commented out by default.*
@@ -811,6 +1010,11 @@ For more details see https://issues.apache.org/jira/browse/CASSANDRA-14096.
 
 == `commitlog_total_space_in_mb`
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+== `commitlog_total_space_in_mb`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 *This option is commented out by default.*
 
 Total space to use for commit logs on disk.
@@ -824,6 +1028,11 @@ of the commitlog volume.
 
 _Default Value:_ 8192
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+_Default Value:_ 8192
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 == `memtable_flush_writers`
 
 *This option is commented out by default.*
@@ -857,6 +1066,11 @@ to never stall waiting for flushing to free memory.
 
 _Default Value:_ 2
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+_Default Value:_ 2
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 == `cdc_total_space_in_mb`
 
 *This option is commented out by default.*
@@ -881,8 +1095,14 @@ or experiencing backpressure, we check at the following interval to see if any
 new space for cdc-tracked tables has been made available. Default to 250ms
 
 _Default Value:_ 250
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `index_summary_capacity_in_mb`
+=======
+
+== `index_summary_capacity_in_mb`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 A fixed memory pool size in MB for for SSTable index summaries. If left
 empty, this will default to 5% of the heap size. If the memory usage of
@@ -900,8 +1120,14 @@ proportional their recent read rates.  Setting to -1 will disable this
 process, leaving existing index summaries at their current sampling level.
 
 _Default Value:_ 60
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `trickle_fsync`
+=======
+
+== `trickle_fsync`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Whether to, when doing sequential writing, fsync() at intervals in
 order to force the operating system to flush the dirty
@@ -910,6 +1136,7 @@ impacting read latencies. Almost always a good idea on SSDs; not
 necessarily on platters.
 
 _Default Value:_ false
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `trickle_fsync_interval_in_kb`
 
@@ -917,6 +1144,16 @@ _Default Value:_ 10240
 
 == `storage_port`
 
+=======
+
+== `trickle_fsync_interval_in_kb`
+
+
+_Default Value:_ 10240
+
+== `storage_port`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 TCP port, for commands and data
 For security reasons, you should not expose this port to the internet.  Firewall it if needed.
@@ -1001,8 +1238,14 @@ Internode authentication backend, implementing IInternodeAuthenticator;
 used to allow/disallow connections from peer nodes.
 
 _Default Value:_ org.apache.cassandra.auth.AllowAllInternodeAuthenticator
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `start_native_transport`
+=======
+
+== `start_native_transport`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Whether to start the native transport server.
 The address on which the native transport is bound is defined by rpc_address.
@@ -1073,8 +1316,14 @@ The maximum number of concurrent client connections per source ip.
 The default is -1, which means unlimited.
 
 _Default Value:_ -1
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `native_transport_allow_older_protocols`
+=======
+
+== `native_transport_allow_older_protocols`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 Controls whether Cassandra honors older, yet currently supported, protocol versions.
 The default is true, which means all supported protocols will be honored.
@@ -1437,6 +1686,11 @@ on all links to or from any node in the cluster.
 
 _Default Value:_ 4194304                       #4MiB
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+_Default Value:_ 4194304                       #4MiB
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 == `internode_application_send_queue_reserve_endpoint_capacity_in_bytes`
 
 *This option is commented out by default.*
@@ -1460,12 +1714,24 @@ _Default Value:_ 4194304                    #4MiB
 *This option is commented out by default.*
 
 _Default Value:_ 134217728 #128MiB
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `internode_application_receive_queue_reserve_global_capacity_in_bytes`
 
 *This option is commented out by default.*
 
 _Default Value:_ 536870912   #512MiB
+=======
+
+== `internode_application_receive_queue_reserve_global_capacity_in_bytes`
+
+*This option is commented out by default.*
+
+_Default Value:_ 536870912   #512MiB
+
+== `slow_query_log_timeout_in_ms`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `slow_query_log_timeout_in_ms`
 
@@ -1512,8 +1778,15 @@ Increase this when you notice that joins are CPU-bound rather that network
 bound (for example a few nodes with big files).
 
 _Default Value:_ 1
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `phi_convict_threshold`
+=======
+
+== `phi_convict_threshold`
+
+*This option is commented out by default.*
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 *This option is commented out by default.*
 
@@ -1597,7 +1870,11 @@ _Default Value:_ SimpleSnitch
 controls how often to perform the more expensive part of host score
 calculation
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 _Default Value:_ 100
+=======
+_Default Value:_ 100 
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `dynamic_snitch_reset_interval_in_ms`
 
@@ -1643,8 +1920,12 @@ http://download.oracle.com/javase/8/docs/technotes/guides/security/jsse/JSSERefG
 
 _Default Value (complex option)_:
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 [source, plaintext]
 ----
+=======
+....
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
         # set to true for allowing secure incoming connections
         enabled: false
         # If enabled and optional are both set to true, encrypted and unencrypted connections are handled on the storage_port
@@ -1664,7 +1945,11 @@ _Default Value (complex option)_:
         # cipher_suites: [TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_DHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA]
         # require_client_auth: false
         # require_endpoint_verification: false
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 ----
+=======
+....
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `client_encryption_options`
 
@@ -1672,8 +1957,12 @@ enable or disable client-to-server encryption.
 
 _Default Value (complex option)_:
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 [source, plaintext]
 ----
+=======
+....
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
         enabled: false
         # If enabled and optional is set to true encrypted and unencrypted connections are handled.
         optional: false
@@ -1687,7 +1976,11 @@ _Default Value (complex option)_:
         # protocol: TLS
         # store_type: JKS
         # cipher_suites: [TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_DHE_RSA_WITH_AES_128_CBC_SHA,TLS_DHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA]
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 ----
+=======
+....
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `internode_compression`
 
@@ -1724,10 +2017,17 @@ TTL for different trace types used during logging of the repair process.
 _Default Value:_ 86400
 
 == `tracetype_repair_ttl`
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 
 _Default Value:_ 604800
 
+=======
+
+
+_Default Value:_ 604800
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 == `enable_user_defined_functions`
 
 
@@ -1758,6 +2058,12 @@ below their system default. The sysinternals 'clockres' tool can confirm your sy
 setting.
 
 _Default Value:_ 1
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
+=======
+
+== `transparent_data_encryption_options`
+
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `transparent_data_encryption_options`
 
@@ -1776,8 +2082,12 @@ more are coming in future cassandra releases: commitlog, hints
 
 _Default Value (complex option)_:
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 [source, plaintext]
 ----
+=======
+....
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
         enabled: false
         chunk_length_kb: 64
         cipher: AES/CBC/PKCS5Padding
@@ -1791,7 +2101,11 @@ _Default Value (complex option)_:
                 keystore_password: cassandra
                 store_type: JCEKS
                 key_password: cassandra
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 ----
+=======
+....
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 
 == `tombstone_warn_threshold`
 
@@ -2076,6 +2390,7 @@ _Default Value:_ false
 Enables creation of transiently replicated keyspaces on this node.
 Transient replication is experimental and is not recommended for production use.
 
+<<<<<<< HEAD:doc/modules/cassandra/pages/configuration/cass_yaml_file.adoc
 *Default Value:* false
 
 == `enable_drop_compact_storage`
@@ -2084,3 +2399,6 @@ Enables the used of 'ALTER ... DROP COMPACT STORAGE' statements on this node.
 'ALTER ... DROP COMPACT STORAGE' is considered experimental and is not recommended for production use.
 
 *Default Value:* false
+=======
+_Default Value:_ false
+>>>>>>> e774a6574c (Migrate documentation from ReStructuredText and Sphinx, to Asciidoc and Antora):doc/modules/cassandra/pages/modules/cassandra/pages/configuration/cass_yaml_file.adoc

@@ -22,7 +22,6 @@ Usage:
 
 YAML_INPUT=conf/cassandra.yaml
 YAML_OUTPUT=modules/cassandra/pages/configuration/cass_yaml_file.adoc
-
     convert_yaml_to_adoc.py $YAML_INPUT $YAML_OUTPUT
 """
 
