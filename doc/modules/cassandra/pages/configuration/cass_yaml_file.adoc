@@ -320,11 +320,7 @@ _Default Value (complex option)_:
     #     - /var/lib/cassandra/data
 ....
 
-== `commitlog_directory`
-
-<<<<<<< HEAD:doc/source/modules/cassandra/pages/configuration/cass_yaml_file.adoc
-=======
-``local_system_data_file_directory``
+== ``local_system_data_file_directory``
 -------------------------
 *This option is commented out by default.*
 
@@ -335,11 +331,10 @@ directories specified by data_file_directories.
 This approach ensures that if one of the other disks is lost Cassandra can continue to operate. For extra security
 this setting allows to store those data on a different directory that provides redundancy.
 
-``commitlog_directory``
+== ``commitlog_directory``
 -----------------------
->>>>>>> d7aaaa50013d1e275bc5836a48c64893e1365f43:doc/source/configuration/cass_yaml_file.rst
 *This option is commented out by default.*
-commit log.  when running on magnetic HDD, this should be a
+When running on magnetic HDD, this should be a
 separate spindle than the data directories.
 If not set, the default directory is $CASSANDRA_HOME/data/commitlog.
 
@@ -1851,7 +1846,6 @@ using the StorageService mbean.
 _Default Value:_ 1000
 
 == `tombstone_failure_threshold`
-
 
 _Default Value:_ 100000
 
