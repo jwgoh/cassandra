@@ -53,7 +53,7 @@ milliseconds.
 - `commitlog_sync_period_in_ms`: Time to wait between "periodic" fsyncs
 _Default Value:_ 10000
 
-_Default Value:_ batch
+_Default Value:_ periodic
 
 ** NOTE: In the event of an unexpected shutdown, Cassandra can lose up
 to the sync period or more if the sync is delayed. If using "batch"
